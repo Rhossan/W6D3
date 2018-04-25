@@ -9,6 +9,28 @@ class FollowToggle {
                         options.followState);
   }
 
+  handleClick(event) {
+    const followToggle = this;
+
+    event.preventDefault();
+
+    if (this.followState === 'followed') {
+      this.followState = 'unfollowing';
+      this.render();
+      Util.unfollowUser(this.userId).then(() => {
+        followToggle.followState = 'unfollowed';
+        followToggle.render();
+      });
+    } else if (this.followState === 'unfollowed') {
+      this.followState = 'following';
+      this.render();
+      Util.followUser(this.userId).then(() => {
+        followToggle.followState = 'followed';
+        followToggle.render();
+      });
+    }
+  }
+
   render() {
     switch (this.followState) {
       case 'followed':
