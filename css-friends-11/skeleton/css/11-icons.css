@@ -1,1 +1,25 @@
-/* PHASE 11: Icons */
+[class*="icon-"] {
+  display: inline-block;
+  background-image: url(".././images/sprite.png");
+  background-size: 10px 300px;
+  vertical-align: bottom;
+  overflow: hidden;
+  height: 0;
+  width: 25px;
+  padding-top: 25px;
+}
+
+[class*="icon-small-"] {
+  padding-top: 10px;
+  margin: auto;
+  width: 25px;
+
+}
+
+.icon-comment {
+  background-position: 0 0;
+}
+
+.icon-comment:hover {
+  background-position: 0 -25px;
+}
