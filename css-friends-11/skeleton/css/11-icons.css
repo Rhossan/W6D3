@@ -23,3 +23,19 @@
 .icon-comment:hover {
   background-position: 0 -25px;
 }
+
+.icon-reblog {
+  background-position: 0 -100px;
+}
+
+.icon-reblog:hover {
+  background-position: 0 -125px;
+}
+
+.icon-favorite {
+  background-position: 0 -100px;
+}
+
+.icon-favorite:hover {
+  background-position: 0 -75px;
+}
